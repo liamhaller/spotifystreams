@@ -3,7 +3,6 @@
 #' @param dataframe A dataframe that contains artist stream
 #' @param artist_code_column the column in which the artist codes are stored
 #' @return An vector represetning total monthly streams of an artists
-#' @export list_get_monthly_listerns
 
 
 list_get_monthly_listerns <- function(dataframe, artist_code_column = 2){
