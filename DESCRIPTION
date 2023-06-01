@@ -1,0 +1,15 @@
+Package: spotifystreams
+Title: Retreives and saves monthly spotify stream data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Liam", "Haller", , "first.last@example.com", role = c("aut", "cre")
+Description: Package scrapes spotify website to retreive monthly streams of Artists
+             and saves them as an RDS object
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports:
+  rvest,
+  dplyr
