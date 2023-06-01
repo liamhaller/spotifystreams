@@ -1,5 +1,13 @@
-#' @export
+#' Get Monthly Listeners
+
+#' @param artist_code unique 22 alpha-numeric code to identify spotify artists
+#' @return An integer represetning total monthly streams of an artists
+
 #' @importFrom rvest read_html %>% html_elements html_text
+#' @importFrom dplyr %>%
+
+#' @export
+
 
 
 

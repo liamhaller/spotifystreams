@@ -3,6 +3,7 @@
 export(get_monthly_listeners)
 export(list_get_monthly_listerns)
 export(update_streams)
+importFrom(dplyr,"%>%")
 importFrom(rvest,"%>%")
 importFrom(rvest,html_elements)
 importFrom(rvest,html_text)

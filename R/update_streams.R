@@ -1,4 +1,9 @@
+#' Update streams
+
+#' @param list A list containing multiple dataframes that house artist codes
+#' @return A list with a new column indciating todays mohtly stream count
 #' @export
+
 
 update_streams <- function(list){
 
