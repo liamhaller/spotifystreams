@@ -1,3 +1,4 @@
+#' @export
 #' @importFrom rvest read_html %>% html_elements html_text
 
 
