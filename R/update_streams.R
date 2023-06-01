@@ -13,7 +13,7 @@ update_streams <- function(list){
   col_title <- format(Sys.Date(), "%D")
 
   #need number of columsn to change the column name after
-  n_col <- ncol(league[[1]]) + 1 #total columns post update
+  n_col <- ncol(list[[1]]) + 1 #total columns post update
 
   #Get updated value of streams for all league members
   update <- map(list, list_get_monthly_listerns)
