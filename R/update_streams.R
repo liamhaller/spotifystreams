@@ -4,7 +4,7 @@
 #' @importFrom rlang enexpr
 #' @param list A list containing multiple dataframes that house artist codes
 #' @return A list with a new column indciating todays mohtly stream count
-#' @export
+#' @export update_streams
 
 
 update_streams <- function(list){
