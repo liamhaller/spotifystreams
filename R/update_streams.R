@@ -1,5 +1,7 @@
 #' Update streams
 
+#' @importFrom purrr map
+#' @importFrom rlang enexpr
 #' @param list A list containing multiple dataframes that house artist codes
 #' @return A list with a new column indciating todays mohtly stream count
 #' @export
@@ -17,7 +19,7 @@ update_streams <- function(list){
   update <- map(list, list_get_monthly_listerns)
 
   #update values in list & change name of column
-  for(i in seq_along(league)){
+  for(i in seq_along(list)){
     #create a new column in the league member database
     list[[i]]$placeholder <- update[[i]]
 
