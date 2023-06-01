@@ -1,5 +1,4 @@
 #' Update streams
-
 #' @importFrom purrr map
 #' @importFrom rlang enexpr
 #' @param list A list containing multiple dataframes that house artist codes
@@ -16,7 +15,7 @@ update_streams <- function(list){
   n_col <- ncol(list[[1]]) + 1 #total columns post update
 
   #Get updated value of streams for all league members
-  update <- map(list, list_get_monthly_listerns)
+  update <- purrr::map(list, list_get_monthly_listerns)
 
   #update values in list & change name of column
   for(i in seq_along(list)){
@@ -25,7 +24,7 @@ update_streams <- function(list){
 
     #set column title to the date (you would not belive how complicated this was)
     names <- colnames(list[[i]])
-    names[n_col] <-  enexpr(col_title)
+    names[n_col] <-  rlang::enexpr(col_title)
     colnames(list[[i]]) <- names
 
   }
