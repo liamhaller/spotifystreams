@@ -4,7 +4,7 @@
 #' @param updated_coulmn which column contains the updated metrics
 #' @param sheet_id code that identifys google sheet
 #' @param auth_token saved auth token to connnect to googlesheets
-#'
+#' @importFrom googlesheets4 gs4_deauth read_sheet gs4_auth gs4_has_token range_write
 #' @return nothing is returned, but external sheet is updated
 #' @export
 #'
@@ -17,10 +17,10 @@ update_sheets <- function(list, updated_coulmn, sheet_id, auth_token){
     sheet_name <- names(list)[i]
 
     #Deauth from google sheets, since not necessary to read
-    gs4_deauth()
+    googlesheets4::gs4_deauth()
 
     #Read the data from google sheets to determin where to write
-    member_sheet <- read_sheet(sheet_id, sheet = sheet_name)
+    member_sheet <- googlesheets4::read_sheet(sheet_id, sheet = sheet_name)
 
     #number of active columsn currently being used in googlesheet
     last_used_col <- ncol(member_sheet)
