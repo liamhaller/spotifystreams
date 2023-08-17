@@ -33,7 +33,7 @@ update_sheets <- function(list, updated_coulmn, sheet_id, auth_token){
 
 
     #the full range where we will past information
-    end_column <- as.character(3+NCOL(list[i]))
+    end_column <- as.character(3 + NROW(list[[i]]))
     writing_range <- paste0(col_name, "3",":",col_name, end_column)
 
     new_streaming_data <- list[[i]][updated_coulmn] #fourht column is the updated values
