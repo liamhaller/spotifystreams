@@ -41,7 +41,7 @@ get_artist_name <- function(artist_code){
 }
 
 
-
+get_artist_name <- Vectorize(get_artist_name)
 
 
 
