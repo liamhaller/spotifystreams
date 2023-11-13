@@ -30,8 +30,11 @@ update_sheets <- function(list, updated_coulmn, sheet_id, auth_token){
     ##                                                   ##
     #The name of the column in which we will write new data (the first non-used column)
     col_name <- colnum_to_letter(new_col)
+
+
     #the full range where we will past information
-    writing_range <- paste0(col_name, "3",":",col_name, "8")
+    end_column <- as.character(3 + NROW(list[[i]]))
+    writing_range <- paste0(col_name, "3",":",col_name, end_column)
 
     new_streaming_data <- list[[i]][updated_coulmn] #fourht column is the updated values
 
