@@ -5,9 +5,6 @@
 #' @importFrom rvest read_html html_elements html_text
 #' @importFrom dplyr %>%
 
-
-
-
 get_monthly_listeners <- function(artist_code){
 
   #Spotify link to artists page
