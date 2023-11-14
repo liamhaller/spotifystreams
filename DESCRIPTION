@@ -4,8 +4,7 @@ Version: 0.0.0.9000
 Authors@R: person("Liam", "Haller", , "first.last@example.com", role = c("aut", "cre"))
 Description: Package scrapes spotify website to retreive monthly streams of Artists
              and saves them as an RDS object
-License: `use_mit_license()`, `use_gpl3_licenhse()` or friends to pick a
-    license
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: false
 Roxygen: list(markdown = TRUE)
@@ -13,8 +12,6 @@ RoxygenNote: 7.2.3
 Imports:
   rvest,
   dplyr,
-  purrr,
-  rlang,
   stringr
 Depends: 
     R (>= 2.10)
