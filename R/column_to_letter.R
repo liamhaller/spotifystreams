@@ -11,7 +11,7 @@ colnum_to_letter <- function(column_number){
     letter <- LETTERS[column_number]
   } else {
     #Fist letter rotates every 26, AB...AZ...BA
-    letter1 <- LETTTERS[round(26/column_number, 0)]
+    letter1 <- LETTERS[round(26/column_number, 0)]
     #Second letter is remainder after 26
     letter2 <- LETTERS[column_number%%26]
 
